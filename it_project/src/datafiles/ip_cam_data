@@ -1,0 +1,5 @@
+ipcamera,tag=ipcam_1 fps=8.13,size=225.148,height=1080,width=1920
+ipcamera,tag=ipcam_2 fps=21.4,size=226.307,height=1080,width=1920
+ipcamera,tag=ipcam_3 fps=10.8,size=226.307,height=1080,width=1920
+ipcamera,tag=ipcam_4 fps=22.2,size=225.148,height=1080,width=1920
+ipcamera,tag=ipcam_5 fps=18.4,size=226.307,height=1080,width=1920
