@@ -70,11 +70,11 @@ def save_map_data():
     try:
         while(True):
             print("saving map")
-            os.system('rosrun map_server map_saver -f /home/student/catkin_ws/maps/robot_%s_map __ns:=robot_%s' % (sys.argv[1], sys.argv[1]))
+            os.system('rosrun map_server map_saver -f /home/student/catkin_ws/src/it_project/maps/robot_%s_map __ns:=robot_%s' % (sys.argv[1], sys.argv[1]))
             new_file = "{}.jpeg".format("/home/student/catkin_ws/maps/robot_%s_map_jpeg" % (sys.argv[1]))
             with Image.open("/home/student/catkin_ws/maps/robot_%s_map.pgm" % (sys.argv[1])) as im:
                 im.save(new_file)
-            os.system('cp /home/student/catkin_ws/maps/robot_%s_map_jpeg.jpeg /home/student/catkin_ws/src/it_project/src/robot_%s_map_jpeg.jpeg' % (sys.argv[1], sys.argv[1]))
+            os.system('cp /home/student/catkin_ws/src/it_project/maps/robot_%s_map_jpeg.jpeg /home/student/catkin_ws/src/it_project/src/datafiles/robot_%s_map_jpeg.jpeg' % (sys.argv[1], sys.argv[1]))
             time.sleep(2)
     except KeyboardInterrupt:
         pass
