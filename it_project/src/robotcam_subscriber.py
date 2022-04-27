@@ -57,14 +57,6 @@ def robot_cam():
         # if any error occurs then this block of code will run
         print("RobotCam Video-Source not found..")
 
-
-def start_slam():
-    try:
-        os.system('roslaunch turtlebot3_slam turtlebot3_slam_no_rviz.launch __ns:=robot_%s' % (sys.argv[1]))
-    except KeyboardInterrupt:
-        pass
-
-
 def save_map_data():
     time.sleep(3)
     try:
@@ -85,8 +77,6 @@ if __name__ == '__main__':
     process_1 = multiprocessing.Process(target=robot_cam)
     process_1.start()
 
-    process_2 = multiprocessing.Process(target=start_slam)
-    process_2.start()
-
-    process_3 = multiprocessing.Process(target=save_map_data)
-    process_3.start()
+    process_2 = multiprocessing.Process(target=save_map_data)
+    process_2
+    .start()
