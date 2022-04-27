@@ -11,5 +11,6 @@ Durchführung:
   - Start der Restreamer Container falls diese nicht bereits laufen mittels "docker start restreamer_x" (1-5)
   - Start des Python-Servers mittels "python3 -m http.server
   - Start des Webvideo-Servers mittels "rosrun web_video_server web_video_server _port:=8888"
+  - roslaunch turtlebot3_slam turtlebot3_slam_no_rviz.launch __ns:=robot_1
   - Start der Skripte mittels "python3 x y" x = Skriptname, y = Roboter Namespace -> 1-5
   - Start des Telegraf Agenten mittels "telegraf --config /home/student/Documents/telegraf.conf"
